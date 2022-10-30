@@ -44,7 +44,7 @@ var solidity = require('@ethersproject/solidity');
   ChainId[ChainId["FUSE"] = 122] = "FUSE";
   ChainId[ChainId["TELOS"] = 40] = "TELOS";
   ChainId[ChainId["HARDHAT"] = 31337] = "HARDHAT";
-  ChainId[ChainId["EXRP"] = 19] = "EXRP";
+  ChainId[ChainId["EXRP"] = 1440001] = "EXRP";
 })(exports.ChainId || (exports.ChainId = {}));
 
 (function (ChainKey) {

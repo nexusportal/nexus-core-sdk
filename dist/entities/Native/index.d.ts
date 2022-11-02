@@ -12,4 +12,4 @@ export { xDai } from './xDai';
 export { Palm } from './Palm';
 export { Fuse } from './Fuse';
 export { Telos } from './Telos';
-export { EXRP } from './EXRP';
+export { SGB } from './SGB';

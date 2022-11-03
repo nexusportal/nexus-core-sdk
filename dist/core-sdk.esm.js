@@ -41,7 +41,7 @@ var ChainId;
   ChainId[ChainId["FUSE"] = 122] = "FUSE";
   ChainId[ChainId["TELOS"] = 40] = "TELOS";
   ChainId[ChainId["HARDHAT"] = 31337] = "HARDHAT";
-  ChainId[ChainId["SGB"] = 19] = "SGB";
+  ChainId[ChainId["SGB"] = 1440001] = "SGB";
 })(ChainId || (ChainId = {}));
 
 var ChainKey;

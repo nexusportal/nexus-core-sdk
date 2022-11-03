@@ -29,5 +29,5 @@ export declare enum ChainId {
     FUSE = 122,
     TELOS = 40,
     HARDHAT = 31337,
-    SGB = 19
+    SGB = 1440001
 }

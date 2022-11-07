@@ -29,4 +29,3 @@ export declare const ZAPPER_ADDRESS: AddressMap;
 export declare const MERKLE_DISTRIBUTOR_ADDRESS: AddressMap;
 export declare const MULTICALL2_ADDRESS: AddressMap;
 export declare const BALANCE_FETCHER_ADDRESS: AddressMap;
-export declare const MULTISIG_ADDRESS: AddressMap;

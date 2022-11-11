@@ -28,5 +28,5 @@ export declare enum ChainId {
     MOONRIVER = 1285,
     FUSE = 122,
     TELOS = 40,
-    SGB = 1440001
+    XRPL = 1440001
 }

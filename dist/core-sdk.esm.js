@@ -75,7 +75,7 @@ var ChainKey;
   ChainKey["RINKEBY"] = "rinkeby";
   ChainKey["TELOS"] = "telos";
   ChainKey["XDAI"] = "xdai";
-  ChainKey["XRPL"] = "songbird";
+  ChainKey["XRPL"] = "ripple";
 })(ChainKey || (ChainKey = {}));
 
 var Rounding;

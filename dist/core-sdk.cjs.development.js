@@ -76,7 +76,7 @@ var solidity = require('@ethersproject/solidity');
   ChainKey["RINKEBY"] = "rinkeby";
   ChainKey["TELOS"] = "telos";
   ChainKey["XDAI"] = "xdai";
-  ChainKey["XRPL"] = "songbird";
+  ChainKey["XRPL"] = "ripple";
 })(exports.ChainKey || (exports.ChainKey = {}));
 
 (function (Rounding) {

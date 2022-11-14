@@ -899,8 +899,40 @@ var Songbird = /*#__PURE__*/function (_NativeCurrency) {
 }(NativeCurrency);
 Songbird._cache = {};
 
+var EXRP = /*#__PURE__*/function (_NativeCurrency) {
+  _inheritsLoose(EXRP, _NativeCurrency);
+
+  function EXRP(chainId) {
+    return _NativeCurrency.call(this, chainId, 18, 'XRP', 'XRP') || this;
+  }
+
+  EXRP.onChain = function onChain(chainId) {
+    var _this$_cache$chainId;
+
+    return (_this$_cache$chainId = this._cache[chainId]) != null ? _this$_cache$chainId : this._cache[chainId] = new EXRP(chainId);
+  };
+
+  var _proto = EXRP.prototype;
+
+  _proto.equals = function equals(other) {
+    return other.isNative && other.chainId === this.chainId;
+  };
+
+  _createClass(EXRP, [{
+    key: "wrapped",
+    get: function get() {
+      var wnative = WNATIVE[this.chainId];
+      !!!wnative ? process.env.NODE_ENV !== "production" ? invariant(false, 'WRAPPED') : invariant(false) : void 0;
+      return wnative;
+    }
+  }]);
+
+  return EXRP;
+}(NativeCurrency);
+EXRP._cache = {};
+
 var _NATIVE;
-var NATIVE = (_NATIVE = {}, _NATIVE[ChainId.ETHEREUM] = /*#__PURE__*/Ether.onChain(ChainId.ETHEREUM), _NATIVE[ChainId.ROPSTEN] = /*#__PURE__*/Ether.onChain(ChainId.ROPSTEN), _NATIVE[ChainId.RINKEBY] = /*#__PURE__*/Ether.onChain(ChainId.RINKEBY), _NATIVE[ChainId.GÖRLI] = /*#__PURE__*/Ether.onChain(ChainId.GÖRLI), _NATIVE[ChainId.KOVAN] = /*#__PURE__*/Ether.onChain(ChainId.KOVAN), _NATIVE[ChainId.FANTOM] = /*#__PURE__*/Fantom.onChain(ChainId.FANTOM), _NATIVE[ChainId.FANTOM_TESTNET] = /*#__PURE__*/Fantom.onChain(ChainId.FANTOM_TESTNET), _NATIVE[ChainId.MATIC] = /*#__PURE__*/Matic.onChain(ChainId.MATIC), _NATIVE[ChainId.MATIC_TESTNET] = /*#__PURE__*/Matic.onChain(ChainId.MATIC_TESTNET), _NATIVE[ChainId.XDAI] = /*#__PURE__*/xDai.onChain(ChainId.XDAI), _NATIVE[ChainId.BSC] = /*#__PURE__*/Binance.onChain(ChainId.BSC), _NATIVE[ChainId.BSC_TESTNET] = /*#__PURE__*/Binance.onChain(ChainId.BSC_TESTNET), _NATIVE[ChainId.ARBITRUM] = /*#__PURE__*/Ether.onChain(ChainId.ARBITRUM), _NATIVE[ChainId.AVALANCHE] = /*#__PURE__*/Avalanche.onChain(ChainId.AVALANCHE), _NATIVE[ChainId.AVALANCHE_TESTNET] = /*#__PURE__*/Avalanche.onChain(ChainId.AVALANCHE_TESTNET), _NATIVE[ChainId.HECO] = /*#__PURE__*/Heco.onChain(ChainId.HECO), _NATIVE[ChainId.HECO_TESTNET] = /*#__PURE__*/Heco.onChain(ChainId.HECO_TESTNET), _NATIVE[ChainId.HARMONY] = /*#__PURE__*/Harmony.onChain(ChainId.HARMONY), _NATIVE[ChainId.HARMONY_TESTNET] = /*#__PURE__*/Harmony.onChain(ChainId.HARMONY_TESTNET), _NATIVE[ChainId.OKEX] = /*#__PURE__*/Okex.onChain(ChainId.OKEX), _NATIVE[ChainId.OKEX_TESTNET] = /*#__PURE__*/Okex.onChain(ChainId.OKEX_TESTNET), _NATIVE[ChainId.CELO] = /*#__PURE__*/Celo.onChain(ChainId.CELO), _NATIVE[ChainId.PALM] = /*#__PURE__*/Palm.onChain(ChainId.PALM), _NATIVE[ChainId.MOONRIVER] = /*#__PURE__*/Movr.onChain(ChainId.MOONRIVER), _NATIVE[ChainId.FUSE] = /*#__PURE__*/Fuse.onChain(ChainId.FUSE), _NATIVE[ChainId.XRPL] = /*#__PURE__*/Songbird.onChain(ChainId.XRPL), _NATIVE);
+var NATIVE = (_NATIVE = {}, _NATIVE[ChainId.ETHEREUM] = /*#__PURE__*/Ether.onChain(ChainId.ETHEREUM), _NATIVE[ChainId.ROPSTEN] = /*#__PURE__*/Ether.onChain(ChainId.ROPSTEN), _NATIVE[ChainId.RINKEBY] = /*#__PURE__*/Ether.onChain(ChainId.RINKEBY), _NATIVE[ChainId.GÖRLI] = /*#__PURE__*/Ether.onChain(ChainId.GÖRLI), _NATIVE[ChainId.KOVAN] = /*#__PURE__*/Ether.onChain(ChainId.KOVAN), _NATIVE[ChainId.FANTOM] = /*#__PURE__*/Fantom.onChain(ChainId.FANTOM), _NATIVE[ChainId.FANTOM_TESTNET] = /*#__PURE__*/Fantom.onChain(ChainId.FANTOM_TESTNET), _NATIVE[ChainId.MATIC] = /*#__PURE__*/Matic.onChain(ChainId.MATIC), _NATIVE[ChainId.MATIC_TESTNET] = /*#__PURE__*/Matic.onChain(ChainId.MATIC_TESTNET), _NATIVE[ChainId.XDAI] = /*#__PURE__*/xDai.onChain(ChainId.XDAI), _NATIVE[ChainId.BSC] = /*#__PURE__*/Binance.onChain(ChainId.BSC), _NATIVE[ChainId.BSC_TESTNET] = /*#__PURE__*/Binance.onChain(ChainId.BSC_TESTNET), _NATIVE[ChainId.ARBITRUM] = /*#__PURE__*/Ether.onChain(ChainId.ARBITRUM), _NATIVE[ChainId.AVALANCHE] = /*#__PURE__*/Avalanche.onChain(ChainId.AVALANCHE), _NATIVE[ChainId.AVALANCHE_TESTNET] = /*#__PURE__*/Avalanche.onChain(ChainId.AVALANCHE_TESTNET), _NATIVE[ChainId.HECO] = /*#__PURE__*/Heco.onChain(ChainId.HECO), _NATIVE[ChainId.HECO_TESTNET] = /*#__PURE__*/Heco.onChain(ChainId.HECO_TESTNET), _NATIVE[ChainId.HARMONY] = /*#__PURE__*/Harmony.onChain(ChainId.HARMONY), _NATIVE[ChainId.HARMONY_TESTNET] = /*#__PURE__*/Harmony.onChain(ChainId.HARMONY_TESTNET), _NATIVE[ChainId.OKEX] = /*#__PURE__*/Okex.onChain(ChainId.OKEX), _NATIVE[ChainId.OKEX_TESTNET] = /*#__PURE__*/Okex.onChain(ChainId.OKEX_TESTNET), _NATIVE[ChainId.CELO] = /*#__PURE__*/Celo.onChain(ChainId.CELO), _NATIVE[ChainId.PALM] = /*#__PURE__*/Palm.onChain(ChainId.PALM), _NATIVE[ChainId.MOONRIVER] = /*#__PURE__*/Movr.onChain(ChainId.MOONRIVER), _NATIVE[ChainId.FUSE] = /*#__PURE__*/Fuse.onChain(ChainId.FUSE), _NATIVE[ChainId.XRPL] = /*#__PURE__*/EXRP.onChain(ChainId.XRPL), _NATIVE);
 
 var MaxUint256 = /*#__PURE__*/JSBI.BigInt('0xffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff'); // exports for internal consumption
 
@@ -2218,5 +2250,5 @@ var Router = /*#__PURE__*/function () {
   return Router;
 }();
 
-export { AbstractCurrency, Avalanche, BALANCE_FETCHER_ADDRESS, BAR_ADDRESS, BENTOBOX_ADDRESS, BORING_HELPER_ADDRESS, Binance, CHAINLINK_ORACLE_ADDRESS, CHAIN_KEY, Celo, ChainId, ChainKey, CurrencyAmount, DAI_ADDRESS, ENS_REGISTRAR_ADDRESS, Ether, FACTORY_ADDRESS, FIVE, Fantom, Fraction, Fuse, Harmony, Heco, INIT_CODE_HASH, InsufficientInputAmountError, InsufficientReservesError, KASHI_ADDRESS, MAKER_ADDRESS, MASTERCHEF_ADDRESS, MASTERCHEF_V2_ADDRESS, MAX_SAFE_INTEGER, MERKLE_DISTRIBUTOR_ADDRESS, MINICHEF_ADDRESS, MINIMUM_LIQUIDITY, MULTICALL2_ADDRESS, Matic, MaxUint256, Movr, NATIVE, NativeCurrency, ONE, Okex, PEGGED_ORACLE_ADDRESS, Pair, Palm, Percent, Price, ROUTER_ADDRESS, Rounding, Route, Router, SOLIDITY_TYPE_MAXIMA, SUSHI, SUSHISWAP_MULTISWAPPER_ADDRESS, SUSHISWAP_MULTI_EXACT_SWAPPER_ADDRESS, SUSHISWAP_SWAPPER_ADDRESS, SUSHISWAP_TWAP_0_ORACLE_ADDRESS, SUSHISWAP_TWAP_1_ORACLE_ADDRESS, SUSHI_ADDRESS, SolidityType, Songbird, TEN, THREE, TIMELOCK_ADDRESS, TWO, Token, Trade, TradeType, TradeVersion, USD, USDC, USDC_ADDRESS, USDT_ADDRESS, USD_ADDRESS, WETH9, WETH9_ADDRESS, WNATIVE, WNATIVE_ADDRESS, ZAPPER_ADDRESS, ZERO, _100, _1000, _997, computePairAddress, computePriceImpact, currencyEquals, difference, getProviderOrSigner, getSigner, inputOutputComparator, maximum, minimum, rebase, sortedInsert, sqrt, toElastic, toHex, tradeComparator, validateAndParseAddress, validateSolidityTypeInstance, xDai };
+export { AbstractCurrency, Avalanche, BALANCE_FETCHER_ADDRESS, BAR_ADDRESS, BENTOBOX_ADDRESS, BORING_HELPER_ADDRESS, Binance, CHAINLINK_ORACLE_ADDRESS, CHAIN_KEY, Celo, ChainId, ChainKey, CurrencyAmount, DAI_ADDRESS, ENS_REGISTRAR_ADDRESS, EXRP, Ether, FACTORY_ADDRESS, FIVE, Fantom, Fraction, Fuse, Harmony, Heco, INIT_CODE_HASH, InsufficientInputAmountError, InsufficientReservesError, KASHI_ADDRESS, MAKER_ADDRESS, MASTERCHEF_ADDRESS, MASTERCHEF_V2_ADDRESS, MAX_SAFE_INTEGER, MERKLE_DISTRIBUTOR_ADDRESS, MINICHEF_ADDRESS, MINIMUM_LIQUIDITY, MULTICALL2_ADDRESS, Matic, MaxUint256, Movr, NATIVE, NativeCurrency, ONE, Okex, PEGGED_ORACLE_ADDRESS, Pair, Palm, Percent, Price, ROUTER_ADDRESS, Rounding, Route, Router, SOLIDITY_TYPE_MAXIMA, SUSHI, SUSHISWAP_MULTISWAPPER_ADDRESS, SUSHISWAP_MULTI_EXACT_SWAPPER_ADDRESS, SUSHISWAP_SWAPPER_ADDRESS, SUSHISWAP_TWAP_0_ORACLE_ADDRESS, SUSHISWAP_TWAP_1_ORACLE_ADDRESS, SUSHI_ADDRESS, SolidityType, Songbird, TEN, THREE, TIMELOCK_ADDRESS, TWO, Token, Trade, TradeType, TradeVersion, USD, USDC, USDC_ADDRESS, USDT_ADDRESS, USD_ADDRESS, WETH9, WETH9_ADDRESS, WNATIVE, WNATIVE_ADDRESS, ZAPPER_ADDRESS, ZERO, _100, _1000, _997, computePairAddress, computePriceImpact, currencyEquals, difference, getProviderOrSigner, getSigner, inputOutputComparator, maximum, minimum, rebase, sortedInsert, sqrt, toElastic, toHex, tradeComparator, validateAndParseAddress, validateSolidityTypeInstance, xDai };
 //# sourceMappingURL=core-sdk.esm.js.map

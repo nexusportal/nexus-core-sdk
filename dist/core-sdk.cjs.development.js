@@ -892,8 +892,40 @@ var Songbird = /*#__PURE__*/function (_NativeCurrency) {
 }(NativeCurrency);
 Songbird._cache = {};
 
+var EXRP = /*#__PURE__*/function (_NativeCurrency) {
+  _inheritsLoose(EXRP, _NativeCurrency);
+
+  function EXRP(chainId) {
+    return _NativeCurrency.call(this, chainId, 18, 'XRP', 'XRP') || this;
+  }
+
+  EXRP.onChain = function onChain(chainId) {
+    var _this$_cache$chainId;
+
+    return (_this$_cache$chainId = this._cache[chainId]) != null ? _this$_cache$chainId : this._cache[chainId] = new EXRP(chainId);
+  };
+
+  var _proto = EXRP.prototype;
+
+  _proto.equals = function equals(other) {
+    return other.isNative && other.chainId === this.chainId;
+  };
+
+  _createClass(EXRP, [{
+    key: "wrapped",
+    get: function get() {
+      var wnative = WNATIVE[this.chainId];
+      !!!wnative ?  invariant(false, 'WRAPPED')  : void 0;
+      return wnative;
+    }
+  }]);
+
+  return EXRP;
+}(NativeCurrency);
+EXRP._cache = {};
+
 var _NATIVE;
-var NATIVE = (_NATIVE = {}, _NATIVE[exports.ChainId.ETHEREUM] = /*#__PURE__*/Ether.onChain(exports.ChainId.ETHEREUM), _NATIVE[exports.ChainId.ROPSTEN] = /*#__PURE__*/Ether.onChain(exports.ChainId.ROPSTEN), _NATIVE[exports.ChainId.RINKEBY] = /*#__PURE__*/Ether.onChain(exports.ChainId.RINKEBY), _NATIVE[exports.ChainId.GÖRLI] = /*#__PURE__*/Ether.onChain(exports.ChainId.GÖRLI), _NATIVE[exports.ChainId.KOVAN] = /*#__PURE__*/Ether.onChain(exports.ChainId.KOVAN), _NATIVE[exports.ChainId.FANTOM] = /*#__PURE__*/Fantom.onChain(exports.ChainId.FANTOM), _NATIVE[exports.ChainId.FANTOM_TESTNET] = /*#__PURE__*/Fantom.onChain(exports.ChainId.FANTOM_TESTNET), _NATIVE[exports.ChainId.MATIC] = /*#__PURE__*/Matic.onChain(exports.ChainId.MATIC), _NATIVE[exports.ChainId.MATIC_TESTNET] = /*#__PURE__*/Matic.onChain(exports.ChainId.MATIC_TESTNET), _NATIVE[exports.ChainId.XDAI] = /*#__PURE__*/xDai.onChain(exports.ChainId.XDAI), _NATIVE[exports.ChainId.BSC] = /*#__PURE__*/Binance.onChain(exports.ChainId.BSC), _NATIVE[exports.ChainId.BSC_TESTNET] = /*#__PURE__*/Binance.onChain(exports.ChainId.BSC_TESTNET), _NATIVE[exports.ChainId.ARBITRUM] = /*#__PURE__*/Ether.onChain(exports.ChainId.ARBITRUM), _NATIVE[exports.ChainId.AVALANCHE] = /*#__PURE__*/Avalanche.onChain(exports.ChainId.AVALANCHE), _NATIVE[exports.ChainId.AVALANCHE_TESTNET] = /*#__PURE__*/Avalanche.onChain(exports.ChainId.AVALANCHE_TESTNET), _NATIVE[exports.ChainId.HECO] = /*#__PURE__*/Heco.onChain(exports.ChainId.HECO), _NATIVE[exports.ChainId.HECO_TESTNET] = /*#__PURE__*/Heco.onChain(exports.ChainId.HECO_TESTNET), _NATIVE[exports.ChainId.HARMONY] = /*#__PURE__*/Harmony.onChain(exports.ChainId.HARMONY), _NATIVE[exports.ChainId.HARMONY_TESTNET] = /*#__PURE__*/Harmony.onChain(exports.ChainId.HARMONY_TESTNET), _NATIVE[exports.ChainId.OKEX] = /*#__PURE__*/Okex.onChain(exports.ChainId.OKEX), _NATIVE[exports.ChainId.OKEX_TESTNET] = /*#__PURE__*/Okex.onChain(exports.ChainId.OKEX_TESTNET), _NATIVE[exports.ChainId.CELO] = /*#__PURE__*/Celo.onChain(exports.ChainId.CELO), _NATIVE[exports.ChainId.PALM] = /*#__PURE__*/Palm.onChain(exports.ChainId.PALM), _NATIVE[exports.ChainId.MOONRIVER] = /*#__PURE__*/Movr.onChain(exports.ChainId.MOONRIVER), _NATIVE[exports.ChainId.FUSE] = /*#__PURE__*/Fuse.onChain(exports.ChainId.FUSE), _NATIVE[exports.ChainId.XRPL] = /*#__PURE__*/Songbird.onChain(exports.ChainId.XRPL), _NATIVE);
+var NATIVE = (_NATIVE = {}, _NATIVE[exports.ChainId.ETHEREUM] = /*#__PURE__*/Ether.onChain(exports.ChainId.ETHEREUM), _NATIVE[exports.ChainId.ROPSTEN] = /*#__PURE__*/Ether.onChain(exports.ChainId.ROPSTEN), _NATIVE[exports.ChainId.RINKEBY] = /*#__PURE__*/Ether.onChain(exports.ChainId.RINKEBY), _NATIVE[exports.ChainId.GÖRLI] = /*#__PURE__*/Ether.onChain(exports.ChainId.GÖRLI), _NATIVE[exports.ChainId.KOVAN] = /*#__PURE__*/Ether.onChain(exports.ChainId.KOVAN), _NATIVE[exports.ChainId.FANTOM] = /*#__PURE__*/Fantom.onChain(exports.ChainId.FANTOM), _NATIVE[exports.ChainId.FANTOM_TESTNET] = /*#__PURE__*/Fantom.onChain(exports.ChainId.FANTOM_TESTNET), _NATIVE[exports.ChainId.MATIC] = /*#__PURE__*/Matic.onChain(exports.ChainId.MATIC), _NATIVE[exports.ChainId.MATIC_TESTNET] = /*#__PURE__*/Matic.onChain(exports.ChainId.MATIC_TESTNET), _NATIVE[exports.ChainId.XDAI] = /*#__PURE__*/xDai.onChain(exports.ChainId.XDAI), _NATIVE[exports.ChainId.BSC] = /*#__PURE__*/Binance.onChain(exports.ChainId.BSC), _NATIVE[exports.ChainId.BSC_TESTNET] = /*#__PURE__*/Binance.onChain(exports.ChainId.BSC_TESTNET), _NATIVE[exports.ChainId.ARBITRUM] = /*#__PURE__*/Ether.onChain(exports.ChainId.ARBITRUM), _NATIVE[exports.ChainId.AVALANCHE] = /*#__PURE__*/Avalanche.onChain(exports.ChainId.AVALANCHE), _NATIVE[exports.ChainId.AVALANCHE_TESTNET] = /*#__PURE__*/Avalanche.onChain(exports.ChainId.AVALANCHE_TESTNET), _NATIVE[exports.ChainId.HECO] = /*#__PURE__*/Heco.onChain(exports.ChainId.HECO), _NATIVE[exports.ChainId.HECO_TESTNET] = /*#__PURE__*/Heco.onChain(exports.ChainId.HECO_TESTNET), _NATIVE[exports.ChainId.HARMONY] = /*#__PURE__*/Harmony.onChain(exports.ChainId.HARMONY), _NATIVE[exports.ChainId.HARMONY_TESTNET] = /*#__PURE__*/Harmony.onChain(exports.ChainId.HARMONY_TESTNET), _NATIVE[exports.ChainId.OKEX] = /*#__PURE__*/Okex.onChain(exports.ChainId.OKEX), _NATIVE[exports.ChainId.OKEX_TESTNET] = /*#__PURE__*/Okex.onChain(exports.ChainId.OKEX_TESTNET), _NATIVE[exports.ChainId.CELO] = /*#__PURE__*/Celo.onChain(exports.ChainId.CELO), _NATIVE[exports.ChainId.PALM] = /*#__PURE__*/Palm.onChain(exports.ChainId.PALM), _NATIVE[exports.ChainId.MOONRIVER] = /*#__PURE__*/Movr.onChain(exports.ChainId.MOONRIVER), _NATIVE[exports.ChainId.FUSE] = /*#__PURE__*/Fuse.onChain(exports.ChainId.FUSE), _NATIVE[exports.ChainId.XRPL] = /*#__PURE__*/EXRP.onChain(exports.ChainId.XRPL), _NATIVE);
 
 var MaxUint256 = /*#__PURE__*/JSBI.BigInt('0xffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff'); // exports for internal consumption
 
@@ -2225,6 +2257,7 @@ exports.Celo = Celo;
 exports.CurrencyAmount = CurrencyAmount;
 exports.DAI_ADDRESS = DAI_ADDRESS;
 exports.ENS_REGISTRAR_ADDRESS = ENS_REGISTRAR_ADDRESS;
+exports.EXRP = EXRP;
 exports.Ether = Ether;
 exports.FACTORY_ADDRESS = FACTORY_ADDRESS;
 exports.FIVE = FIVE;

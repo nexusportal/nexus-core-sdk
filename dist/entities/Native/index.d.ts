@@ -12,3 +12,4 @@ export { xDai } from './xDai';
 export { Palm } from './Palm';
 export { Fuse } from './Fuse';
 export { Songbird } from './Songbird';
+export { EXRP } from './EXRP';

@@ -27,5 +27,5 @@ export declare const NATIVE: {
     1285: Movr;
     122: Fuse;
     40: Telos;
-    1440001: EXRP;
+    1440002: EXRP;
 };

@@ -11,5 +11,5 @@ export { Okex } from './Okex';
 export { xDai } from './xDai';
 export { Palm } from './Palm';
 export { Fuse } from './Fuse';
-export { Telos } from './Telos';
+export { Songbird } from './Songbird';
 export { EXRP } from './EXRP';

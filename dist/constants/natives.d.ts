@@ -1,4 +1,4 @@
-import { Avalanche, Binance, Celo, Ether, Fantom, Fuse, Harmony, Heco, Matic, Movr, Okex, Palm, xDai, EXRP } from '../entities/Native';
+import { Avalanche, Binance, Celo, Ether, Fantom, Fuse, Harmony, Heco, Matic, Movr, Okex, Palm, xDai, EXRP, Apothem, XDC } from '../entities/Native';
 import { ChainId } from '../enums';
 export declare const NATIVE: {
     1: Ether;
@@ -27,4 +27,6 @@ export declare const NATIVE: {
     1285: Movr;
     122: Fuse;
     1440002: EXRP;
+    51: Apothem;
+    50: XDC;
 };

@@ -28,5 +28,7 @@ export declare enum ChainKey {
     RINKEBY = "rinkeby",
     TELOS = "telos",
     XDAI = "xdai",
-    XRPL = "ripple"
+    XRPL = "ripple",
+    XDC = "xdc",
+    APOTHEM = "txdc"
 }

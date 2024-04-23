@@ -1,16 +1,13 @@
 {
   "name": "@sushiswap/core-sdk",
-  "version": "1.0.0-canary.63",
+  "version": "1.0.0-canary.31",
   "license": "MIT",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
-  "files": [
-    "dist"
-  ],
   "module": "dist/core-sdk.esm.js",
   "repository": {
     "url": "sushiswap/sdk",
-    "directory": "packages/core-sdk"
+    "directory": "core-sdk"
   },
   "publishConfig": {
     "access": "public",
@@ -20,8 +17,8 @@
     "lint": "tsdx lint src test",
     "build": "tsdx build",
     "watch": "tsdx watch",
-    "test": "tsdx test --passWithNoTests",
-    "prepublishOnly": "npx tsdx build"
+    "test": "tsdx test",
+    "prepublishOnly": "tsdx build"
   },
   "dependencies": {
     "@ethersproject/address": "^5.4.0",
@@ -38,6 +35,5 @@
   "devDependencies": {
     "@types/big.js": "^6.1.0",
     "tsdx": "^0.14.1"
-  },
-  "gitHead": "8d2731501db79ef1cbbeefeecaccb534eb23fe86"
+  }
 }

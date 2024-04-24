@@ -47,6 +47,6 @@ export const NATIVE = {
   [ChainId.MOONRIVER]: Movr.onChain(ChainId.MOONRIVER),
   [ChainId.FUSE]: Fuse.onChain(ChainId.FUSE),
   [ChainId.XRPL]: EXRP.onChain(ChainId.XRPL),
-  [ChainId.APOTHEM]: Apothem.onChain(ChainId.XRPL),
-  [ChainId.XDC]: Xdc.onChain(ChainId.XRPL),
+  [ChainId.APOTHEM]: Apothem.onChain(ChainId.APOTHEM),
+  [ChainId.XDC]: Xdc.onChain(ChainId.XDC),
 }

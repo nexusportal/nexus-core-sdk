@@ -33,5 +33,6 @@ export declare const NEXU: AddressMap;
 export declare const NEXU_DISTRIBUTOR_ADDRESS: AddressMap;
 export declare const MULTISTAKING_DISTRIBUTOR_ADDRESS: AddressMap;
 export declare const NEXUS_NFT_MULTISTAKING_ADDRESS: AddressMap;
+export declare const NEXUS_NFT_ADDRESS: AddressMap;
 export declare const NEXUS_NFT_WEIGHT_ADDRESS: AddressMap;
 export declare const NEXUS_DIFFUSER_ADDRESS: AddressMap;

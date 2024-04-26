@@ -1,13 +1,13 @@
 {
   "name": "@sushiswap/core-sdk",
-  "version": "1.0.0-canary.31",
+  "version": "1.0.0-canary.63",
   "license": "MIT",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
   "module": "dist/core-sdk.esm.js",
   "repository": {
     "url": "sushiswap/sdk",
-    "directory": "core-sdk"
+    "directory": "packages/core-sdk"
   },
   "publishConfig": {
     "access": "public",
@@ -35,5 +35,6 @@
   "devDependencies": {
     "@types/big.js": "^6.1.0",
     "tsdx": "^0.14.1"
-  }
+  },
+  "gitHead": "8d2731501db79ef1cbbeefeecaccb534eb23fe86"
 }

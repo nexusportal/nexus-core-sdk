@@ -48,6 +48,7 @@ export const WETH9: TokenMap = {
   [ChainId.XDAI]: new Token(ChainId.XDAI, WETH9_ADDRESS[ChainId.XDAI], 18, 'WETH', 'Wrapped Ether'),
   [ChainId.AVALANCHE]: new Token(ChainId.AVALANCHE, WETH9_ADDRESS[ChainId.AVALANCHE], 18, 'WETH', 'Wrapped Ether'),
   [ChainId.PALM]: new Token(ChainId.PALM, WETH9_ADDRESS[ChainId.PALM], 18, 'WETH', 'Wrapped Ether'),
+  [ChainId.XRPL]: new Token(ChainId.XRPL, WETH9_ADDRESS[ChainId.XRPL], 18, 'WETH', 'Wrapped Ether'),
   [ChainId.XDC]: new Token(ChainId.XDC, WETH9_ADDRESS[ChainId.XDC], 18, 'WXDC', 'Wrapped XDC'),
   [ChainId.APOTHEM]: new Token(ChainId.APOTHEM, WETH9_ADDRESS[ChainId.APOTHEM], 18, 'WXDC', 'Wrapped TXDC'),
 }

@@ -14,7 +14,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Setup Node
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v3
         with:
           node-version: 18
       - name: Install dependencies
@@ -40,14 +40,14 @@ jobs:
           FOLDER: temp_dist
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Checkout gh-release branch
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
         with:
           ref: 'gh-release'
       - name: Release
         uses: softprops/action-gh-release@v2
         with: 
-          tag_name: v1.1.1
-          release_name: Release v1.1.1
+          tag_name: v1.1.2
+          release_name: Release v1.1.2
           draft: false
           prerelease: false
           target_commitish: gh-release

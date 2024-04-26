@@ -12,7 +12,7 @@ import {
   Okex,
   Palm,
   xDai,
-  EXRP,
+  EXRP as Exrp,
   Apothem,
   Xdc
 } from '../entities/Native'
@@ -46,7 +46,7 @@ export const NATIVE = {
   [ChainId.PALM]: Palm.onChain(ChainId.PALM),
   [ChainId.MOONRIVER]: Movr.onChain(ChainId.MOONRIVER),
   [ChainId.FUSE]: Fuse.onChain(ChainId.FUSE),
-  [ChainId.XRPL]: EXRP.onChain(ChainId.XRPL),
+  [ChainId.XRPL]: Exrp.onChain(ChainId.XRPL),
   [ChainId.APOTHEM]: Apothem.onChain(ChainId.APOTHEM),
   [ChainId.XDC]: Xdc.onChain(ChainId.XDC),
 }

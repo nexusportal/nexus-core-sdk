@@ -768,7 +768,7 @@ EXRP._cache = {};
 
 var Apothem = /*#__PURE__*/function (_NativeCurrency) {
   function Apothem(chainId) {
-    return _NativeCurrency.call(this, chainId, 18, 'TXDC', 'apothem') || this;
+    return _NativeCurrency.call(this, chainId, 18, 'TXDC', 'Apothem') || this;
   }
   _inheritsLoose(Apothem, _NativeCurrency);
   Apothem.onChain = function onChain(chainId) {
@@ -792,7 +792,7 @@ Apothem._cache = {};
 
 var Xdc = /*#__PURE__*/function (_NativeCurrency) {
   function Xdc(chainId) {
-    return _NativeCurrency.call(this, chainId, 18, 'XDC', 'xdc') || this;
+    return _NativeCurrency.call(this, chainId, 18, 'XDC', 'XDC') || this;
   }
   _inheritsLoose(Xdc, _NativeCurrency);
   Xdc.onChain = function onChain(chainId) {

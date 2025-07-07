@@ -26,7 +26,7 @@ export declare const NATIVE: {
     11297108109: Palm;
     1285: Movr;
     122: Fuse;
-    1440002: Exrp;
+    1440000: Exrp;
     51: Apothem;
     50: Xdc;
 };
